@@ -1,0 +1,214 @@
+
+BinaryButtonCounter.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000da  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .comment      00000030  00000000  00000000  0000012e  2**0
+                  CONTENTS, READONLY
+  2 .debug_aranges 00000028  00000000  00000000  0000015e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_info   00000168  00000000  00000000  00000186  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_abbrev 000000fd  00000000  00000000  000002ee  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_line   0000016f  00000000  00000000  000003eb  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_frame  00000034  00000000  00000000  0000055c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_str    000001f5  00000000  00000000  00000590  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_loc    000000ac  00000000  00000000  00000785  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_ranges 00000018  00000000  00000000  00000831  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+   8:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+   c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  10:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  14:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  18:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  1c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  20:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  24:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  28:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  2c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  30:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  34:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  38:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  3c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  40:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  44:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  48:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  4c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  50:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  54:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  58:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  5c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  60:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  64:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+  74:	0e 94 40 00 	call	0x80	; 0x80 <main>
+  78:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <_exit>
+
+0000007c <__bad_interrupt>:
+  7c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000080 <main>:
+	// Variable initialization
+	uint8_t buttonWasPressed;
+	uint8_t count = 0;
+	
+	// Initialize BUTTON_PORT as an input
+	BUTTON_DDR &= ~(1 << BUTTON);
+  80:	38 98       	cbi	0x07, 0	; 7
+	
+	// Initialize pull-up resistor on BUTTON_PORT
+	BUTTON_PULL_UP |= (1 << BUTTON);
+  82:	40 9a       	sbi	0x08, 0	; 8
+	
+	// Set LED pins to be outputs
+	LED_DDR |= (1 << LED_0);
+  84:	20 9a       	sbi	0x04, 0	; 4
+	LED_DDR |= (1 << LED_1);
+  86:	21 9a       	sbi	0x04, 1	; 4
+	LED_DDR |= (1 << LED_2);
+  88:	22 9a       	sbi	0x04, 2	; 4
+
+int main() {
+	
+	// Variable initialization
+	uint8_t buttonWasPressed;
+	uint8_t count = 0;
+  8a:	20 e0       	ldi	r18, 0x00	; 0
+  8c:	41 e0       	ldi	r20, 0x01	; 1
+			}
+		}
+		
+		// Clear flag for button press
+		else {
+			buttonWasPressed = 0;
+  8e:	50 e0       	ldi	r21, 0x00	; 0
+  90:	90 e0       	ldi	r25, 0x00	; 0
+  92:	01 c0       	rjmp	.+2      	; 0x96 <main+0x16>
+					LED_PORT &= ~(1 << LED_2);
+				}
+				
+				// Reset the button press count
+				if (count == MAX_COUNT) {
+					count = 0;
+  94:	25 2f       	mov	r18, r21
+
+int main() {
+	
+	// Variable initialization
+	uint8_t buttonWasPressed;
+	uint8_t count = 0;
+  96:	84 2f       	mov	r24, r20
+	
+	// Loop forever
+	while(1) {
+		
+		// If button is pressed, debounce, then change LEDs
+		if (ButtonPressed()) {
+  98:	30 99       	sbic	0x06, 0	; 6
+  9a:	02 c0       	rjmp	.+4      	; 0xa0 <main+0x20>
+			}
+		}
+		
+		// Clear flag for button press
+		else {
+			buttonWasPressed = 0;
+  9c:	89 2f       	mov	r24, r25
+  9e:	fc cf       	rjmp	.-8      	; 0x98 <main+0x18>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  a0:	e3 ec       	ldi	r30, 0xC3	; 195
+  a2:	f9 e0       	ldi	r31, 0x09	; 9
+  a4:	31 97       	sbiw	r30, 0x01	; 1
+  a6:	f1 f7       	brne	.-4      	; 0xa4 <main+0x24>
+  a8:	00 c0       	rjmp	.+0      	; 0xaa <main+0x2a>
+  aa:	00 00       	nop
+			
+			// Debounce the button with a time delay
+			_delay_us(10000);
+			
+			// Check for bouncing
+			if (buttonWasPressed == 0) {
+  ac:	81 11       	cpse	r24, r1
+  ae:	f4 cf       	rjmp	.-24     	; 0x98 <main+0x18>
+				
+				// Set flag for button press
+				buttonWasPressed = 1;
+				
+				// Increment button press count
+				count++;
+  b0:	2f 5f       	subi	r18, 0xFF	; 255
+				
+				// Set the first LED (LSB), depending on the value of count
+				if (count & 0b001) {
+  b2:	20 ff       	sbrs	r18, 0
+  b4:	02 c0       	rjmp	.+4      	; 0xba <main+0x3a>
+					LED_PORT |= (1 << LED_0);	
+  b6:	28 9a       	sbi	0x05, 0	; 5
+  b8:	01 c0       	rjmp	.+2      	; 0xbc <main+0x3c>
+				}
+				else {
+					LED_PORT &= ~(1 << LED_0);
+  ba:	28 98       	cbi	0x05, 0	; 5
+				}
+				
+				// Set the second LED, depending on the value of count
+				if (count & 0b010) {
+  bc:	21 ff       	sbrs	r18, 1
+  be:	02 c0       	rjmp	.+4      	; 0xc4 <main+0x44>
+					LED_PORT |= (1 << LED_1);
+  c0:	29 9a       	sbi	0x05, 1	; 5
+  c2:	01 c0       	rjmp	.+2      	; 0xc6 <main+0x46>
+				}
+				else {
+					LED_PORT &= ~(1 << LED_1);
+  c4:	29 98       	cbi	0x05, 1	; 5
+				}
+				
+				// Set the third LED (MSB), depending on the value of count
+				if (count & 0b100) {
+  c6:	22 ff       	sbrs	r18, 2
+  c8:	02 c0       	rjmp	.+4      	; 0xce <main+0x4e>
+					LED_PORT |= (1 << LED_2);
+  ca:	2a 9a       	sbi	0x05, 2	; 5
+  cc:	01 c0       	rjmp	.+2      	; 0xd0 <main+0x50>
+				}
+				else {
+					LED_PORT &= ~(1 << LED_2);
+  ce:	2a 98       	cbi	0x05, 2	; 5
+				}
+				
+				// Reset the button press count
+				if (count == MAX_COUNT) {
+  d0:	28 30       	cpi	r18, 0x08	; 8
+  d2:	01 f3       	breq	.-64     	; 0x94 <main+0x14>
+  d4:	e0 cf       	rjmp	.-64     	; 0x96 <main+0x16>
+
+000000d6 <_exit>:
+  d6:	f8 94       	cli
+
+000000d8 <__stop_program>:
+  d8:	ff cf       	rjmp	.-2      	; 0xd8 <__stop_program>
