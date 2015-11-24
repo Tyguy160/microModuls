@@ -49,228 +49,228 @@
       * PushbuttonModūl
       * ProgrammerModūl
 
-Binary Button Counter
-* MainModūl
-* PowerModūl
-* LEDModūl
-* PushbuttonModūl
-* ProgrammerModūl
+    Binary Button Counter
+      * MainModūl
+      * PowerModūl
+      * LEDModūl
+      * PushbuttonModūl
+      * ProgrammerModūl
 
-RGB LED Fade
-* MainModūl
-* PowerModūl
-* RGBLEDModūl
-* ProgrammerModūl
+    RGB LED Fade
+      * MainModūl
+      * PowerModūl
+      * RGBLEDModūl
+      * ProgrammerModūl
 
-RGB Color Clicker
-* MainModūl
-* PowerModūl
-* RGBLEDModūl
-* PushbuttonModūl
-* ProgrammerModūl
+    RGB Color Clicker
+      * MainModūl
+      * PowerModūl
+      * RGBLEDModūl
+      * PushbuttonModūl
+      * ProgrammerModūl
 
-RGB Temperature Sensor
-* MainModūl
-* PowerModūl
-* RGBLEDModūl
-* TemperatureSensorModūl
-* ProgrammerModūl
+    RGB Temperature Sensor
+      * MainModūl
+      * PowerModūl
+      * RGBLEDModūl
+      * TemperatureSensorModūl
+      * ProgrammerModūl
 
-Speaker w/ Play/Pause button
-* MainModūl
-* PowerModūl
-* PushbuttonModūl
-* PiezoBuzzerModūl
-* ProgrammerModūl
+    Speaker w/ Play/Pause button
+    * MainModūl
+    * PowerModūl
+    * PushbuttonModūl
+    * PiezoBuzzerModūl
+    * ProgrammerModūl
 
-Light Sensitive LED Night Light
-* MainModūl
-* PowerModūl
-* LEDModūl
-* LightSensorModūl
-* PushbuttonModūl
-* PotentiometerModūl
-* ProgrammerModūl
+    Light Sensitive LED Night Light
+    * MainModūl
+    * PowerModūl
+    * LEDModūl
+    * LightSensorModūl
+    * PushbuttonModūl
+    * PotentiometerModūl
+    * ProgrammerModūl
 
-Light Sensitive RGB LED Night Light
-* MainModūl
-* PowerModūl
-* RGBLEDModūl
-* LightSensorModūl
-* PushbuttonModūl
-* PotentiometerModūl
-* ProgrammerModūl
+    Light Sensitive RGB LED Night Light
+    * MainModūl
+    * PowerModūl
+    * RGBLEDModūl
+    * LightSensorModūl
+    * PushbuttonModūl
+    * PotentiometerModūl
+    * ProgrammerModūl
 
-Reaction Timer
-* MainModūl
-* PowerModūl
-* LEDModūl
-* PushbuttonModūl
-* FTDIModūl
-* ProgrammerModūl
+    Reaction Timer
+    * MainModūl
+    * PowerModūl
+    * LEDModūl
+    * PushbuttonModūl
+    * FTDIModūl
+    * ProgrammerModūl
 
-Memory Game
-* MainModūl
-* PowerModūl
-* LEDModūl
-* PushbuttonModūl
-* PiezoBuzzerModūl
-* ProgrammerModūl
+    Memory Game
+    * MainModūl
+    * PowerModūl
+    * LEDModūl
+    * PushbuttonModūl
+    * PiezoBuzzerModūl
+    * ProgrammerModūl
 
-LED Fade
-* MainModūl
-* PowerModūl
-* LEDModūl
-* ProgrammerModūl
+    LED Fade
+    * MainModūl
+    * PowerModūl
+    * LEDModūl
+    * ProgrammerModūl
 
-LED Brightness Button
-MainModūl
-PowerModūl
-LEDModūl
-PushbuttonModūl
-ProgrammerModūl
+    LED Brightness Button
+    * MainModūl
+    * PowerModūl
+    * LEDModūl
+    * PushbuttonModūl
+    * ProgrammerModūl
 
-Morse Code
-MainModūl
-PowerModūl
-LEDModūl
-PushbuttonModūl
-FTDIModūl
-PiezoBuzzerModūl
-ProgrammerModūl
+    Morse Code
+    * MainModūl
+    * PowerModūl
+    * LEDModūl
+    * PushbuttonModūl
+    * FTDIModūl
+    * PiezoBuzzerModūl
+    * ProgrammerModūl
 
-Sequence repeater
-MainModūl
-PowerModūl
-LEDModūl
-PushbuttonModūl
-PiezoBuzzerModūl
-ProgrammerModūl
+    Sequence repeater
+    * MainModūl
+    * PowerModūl
+    * LEDModūl
+    * PushbuttonModūl
+    * PiezoBuzzerModūl
+    * ProgrammerModūl
 
-“Hot Cross Buns” with Piezo
-MainModūl
-PowerModūl
-PiezoBuzzerModūl
-PushbuttonModūl
-ProgrammerModūl
+    “Hot Cross Buns” with Piezo
+    * MainModūl
+    * PowerModūl
+    * PiezoBuzzerModūl
+    * PushbuttonModūl
+    * ProgrammerModūl
 
-Stopwatch
-MainModūl
-PowerModūl
-PushbuttonModūl
-SevenSegmentModūl
-ProgrammerModūl
+    Stopwatch
+    * MainModūl
+    * PowerModūl
+    * PushbuttonModūl
+    * SevenSegmentModūl
+    * ProgrammerModūl
 
-Shot clock (countdown)
-MainModūl
-PowerModūl
-PushbuttonModūl
-PiezoBuzzerModūl
-SevenSegmentModūl
-ProgrammerModūl
+    Shot clock (countdown)
+    * MainModūl
+    * PowerModūl
+    * PushbuttonModūl
+    * PiezoBuzzerModūl
+    * SevenSegmentModūl
+    * ProgrammerModūl
 
-Simple alarm clock
-MainModūl
-PowerModūl
-PushbuttonModūl
-PiezoBuzzerModūl
-LEDModūl
-SevenSegmentModūl
-ProgrammerModūl
+    Simple alarm clock
+    * MainModūl
+    * PowerModūl
+    * PushbuttonModūl
+    * PiezoBuzzerModūl
+    * LEDModūl
+    * SevenSegmentModūl
+    * ProgrammerModūl
 
-Temperature display
-MainModūl
-PowerModūl
-PushbuttonModūl
-PiezoBuzzerModūl
-SevenSegmentModūl
-PotentiometerModūl
-TemperatureSensorModūl
-ProgrammerModūl
+    Temperature display
+    * MainModūl
+    * PowerModūl
+    * PushbuttonModūl
+    * PiezoBuzzerModūl
+    * SevenSegmentModūl
+    * PotentiometerModūl
+    * TemperatureSensorModūl
+    ProgrammerModūl
 
-Temperature logger
-MainModūl
-PowerModūl
-FTDIModūl
-TemperatureSensorModūl
-ProgrammerModūl
+    Temperature logger
+    * MainModūl
+    * PowerModūl
+    * FTDIModūl
+    * TemperatureSensorModūl
+    * ProgrammerModūl
 
-Presence detector
-* MainModūl
-* PowerModūl
-* PushbuttonModūl
-* PiezoBuzzerModūl
-* LightSensorModūl
-* SevenSegmentModūl
-* PotentiometerModūl
-* ProgrammerModūl
+    Presence detector
+    * MainModūl
+    * PowerModūl
+    * PushbuttonModūl
+    * PiezoBuzzerModūl
+    * LightSensorModūl
+    * SevenSegmentModūl
+    * PotentiometerModūl
+    * ProgrammerModūl
 
-Inside/outside temperature monitor
-* MainModūl
-* PowerModūl
-* FTDIModūl
-* PushbuttonModūl
-* TemperatureSensorModūl
-* SevenSegmentModūl
-* ProgrammerModūl
+    Inside/outside temperature monitor
+    * MainModūl
+    * PowerModūl
+    * FTDIModūl
+    * PushbuttonModūl
+    * TemperatureSensorModūl
+    * SevenSegmentModūl
+    * ProgrammerModūl
 
-Reaction timer with score display
-* MainModūl
-* PowerModūl
-* LEDModūl
-* PushbuttonModūl
-* SevenSegmentModūl
-* PiezoBuzzerModūl
-* ProgrammerModūl
+    Reaction timer with score display
+    * MainModūl
+    * PowerModūl
+    * LEDModūl
+    * PushbuttonModūl
+    * SevenSegmentModūl
+    * PiezoBuzzerModūl
+    * ProgrammerModūl
 
-Basic FTDI input
-* MainModūl
-* PowerModūl
-* LEDModūl
-* FTDIModūl
-* ProgrammerModūl
+    Basic FTDI input
+    * MainModūl
+    * PowerModūl
+    * LEDModūl
+    * FTDIModūl
+    * ProgrammerModūl
 
-Basic FTDI output
-* MainModūl
-* PowerModūl
-* LEDModūl
-* PushbuttonModūl
-* FTDIModūl
-* ProgrammerModūl
+    Basic FTDI output
+    * MainModūl
+    * PowerModūl
+    * LEDModūl
+    * PushbuttonModūl
+    * FTDIModūl
+    * ProgrammerModūl
 
-FTDI I/O
-* MainModūl
-* PowerModūl
-* LEDModūl
-* PushbuttonModūl
-* FTDIModūl
-* ProgrammerModūl
+    FTDI I/O
+    * MainModūl
+    * PowerModūl
+    * LEDModūl
+    * PushbuttonModūl
+    * FTDIModūl
+    * ProgrammerModūl
 
-World Clock
-* MainModūl
-* PowerModūl
-* SevenSegmentModūl
-* PushbuttonModūl
-* ProgrammerModūl
+    World Clock
+    * MainModūl
+    * PowerModūl
+    * SevenSegmentModūl
+    * PushbuttonModūl
+    * ProgrammerModūl
 
-World Clock settable through computer
-* MainModūl
-* PowerModūl
-* SevenSegmentModūl
-* PushbuttonModūl
-* FTDIModūl
-* ProgrammerModūl
+    World Clock settable through computer
+    * MainModūl
+    * PowerModūl
+    * SevenSegmentModūl
+    * PushbuttonModūl
+    * FTDIModūl
+    * ProgrammerModūl
 
-World alarm clock settable through computer and synced with global time
-* MainModūl
-* PowerModūl
-* SevenSegmentModūl
-* PushbuttonModūl
-* FTDIModūl
-* PotentiometerModūl
-* LEDModūl
-* TemperatureSensorModūl
-* LightSensorModūl
-* PiezoBuzzerModūl
-* RGBLEDModūl
-* ProgrammerModūl
+    World alarm clock settable through computer and synced with global time
+    * MainModūl
+    * PowerModūl
+    * SevenSegmentModūl
+    * PushbuttonModūl
+    * FTDIModūl
+    * PotentiometerModūl
+    * LEDModūl
+    * TemperatureSensorModūl
+    * LightSensorModūl
+    * PiezoBuzzerModūl
+    * RGBLEDModūl
+    * ProgrammerModūl
