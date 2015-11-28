@@ -19,7 +19,7 @@ int main(void) {
     _delay_ms(1000);                                           /* wait */
 
     PORTD = 0b00000000;          /* Turn off all B pins, including LED */
-    _delay_ms(100);                                           /* wait */
+    _delay_ms(1000);                                           /* wait */
 
   }                                                  /* End event loop */
   return (0);                            /* This line is never reached */

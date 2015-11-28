@@ -2,7 +2,7 @@ MAIN = blinkLED.c
 F_CPU = 1000000
 MCU = atmega328p
 MCU_P = m328p
-PORT=/dev/tty.usbmodem00113751
+PORT=/dev/cu.usbmodem00113751
 
 LOCAL_SOURCE =
 EXTRA_SOURCE_DIR = ../../Library/
