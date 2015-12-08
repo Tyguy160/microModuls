@@ -1,14 +1,13 @@
 /*
- * ToggleBlinkSpeed.cpp
+ * ToggleBlinkSpeed.c
  *
  * Created: 6/5/2015 5:37:36 AM
  *  Author: Tyler
  */
 
-int state = 0;
-
-// Connect LED to PB0
+// Connect LED to PC0
 #define LED_PORT PC0
+// Connect button to PC3
 #define BUTTON_PORT PC3
 #define DELAY_TIME_1 100
 #define DELAY_TIME_2 500
@@ -18,10 +17,12 @@ int state = 0;
 #include <avr/io.h>
 #include <util/delay.h>
 
-int ButtonPressed() {
+int is_pressed() {
 	// Return the status of the button
-	return (PINC & (1 << BUTTON_PORT));
+	return ((PINC & (1 << BUTTON_PORT)) == 0);
 }
+
+int state;
 
 int main()
 {
@@ -43,32 +44,28 @@ int main()
 	{
 
 		// If button is pressed, blink at rate of DELAY_TIME_1
-		if (ButtonPressed()) {
+		if (is_pressed()) {
 			state += 1;
 			// Reset state after it reaches max value
 			if (state == MAX_STATE) {
 				state = 0;
 			}
+            // 1 second delay to prevent button press from being counted more than once
+            _delay_ms(1000);
 		}
 
 		switch (state) {
 			case 0:
 				// Delay between toggle (in milliseconds)
-				PORTC &= ~(1 << LED_PORT);
-				_delay_ms(DELAY_TIME_1);
-				PORTC |= (1 << LED_PORT);
+				PORTC ^= (1 << LED_PORT);
 				_delay_ms(DELAY_TIME_1);
 				break;
 			case 1:
-				PORTC &= ~(1 << LED_PORT);
-				_delay_ms(DELAY_TIME_2);
-				PORTC |= (1 << LED_PORT);
+				PORTC ^= (1 << LED_PORT);
 				_delay_ms(DELAY_TIME_2);
 				break;
 			case 2:
-				PORTC &= ~(1 << LED_PORT);
-				_delay_ms(DELAY_TIME_3);
-				PORTC |= (1 << LED_PORT);
+				PORTC ^= (1 << LED_PORT);
 				_delay_ms(DELAY_TIME_3);
 				break;
 		}
