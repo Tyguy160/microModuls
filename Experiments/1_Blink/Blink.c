@@ -1,13 +1,12 @@
 /*
- * Blink.cpp
- *
- * Created: 5/31/2015 4:28:21 PM
- *  Author: Tyler
- */ 
+ ADD DESCRIPTION HERE
+ */
 
 // Connect LED to PB0
-#define LED_PORT PB0
-#define DELAY_TIME 500
+#define LED_PORT PC0
+#define DATA_DIRECTION_REGISTER DDRC
+#define PORT PORTC
+#define DELAY_TIME 10000
 
 // External libraries
 #include <avr/io.h>
@@ -16,20 +15,20 @@
 int main()
 {
 	// Set LED_PORT to be an output
-	DDRB |= (1 << LED_PORT);
-	
+	DATA_DIRECTION_REGISTER |= (1 << LED_PORT);
+
 	// Turn on the LED
-	PORTB |= (1 << LED_PORT);
-	
+	PORT |= (1 << LED_PORT);
+
 	// Loop forever
     while(1)
     {
 		// Toggle the status of LED_PORT
-		PORTB ^= (1 << LED_PORT);
-		
+		PORT ^= (1 << LED_PORT);
+
 		// Delay between toggle (in milliseconds)
 		_delay_ms(DELAY_TIME);
     }
-	
+
 	return 0;
 }

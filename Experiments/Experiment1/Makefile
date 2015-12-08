@@ -1,14 +1,14 @@
-MAIN = blinkLED.c
+MAIN = Blink.c
 F_CPU = 1000000
 MCU = atmega328p
 MCU_P = m328p
-PORT=/dev/cu.usbmodem00113751
+#PORT=/dev/cu.usbmodem00113751
 
 LOCAL_SOURCE =
 EXTRA_SOURCE_DIR = ../../Library/
 
-PROGRAMMER_TYPE = avrisp2
-PROGRAMMER_ARGS = -P $(PORT)
+PROGRAMMER_TYPE = usbtiny
+#PROGRAMMER_ARGS = -P $(PORT)
 
 CC = avr-gcc
 OBJCOPY = avr-objcopy
