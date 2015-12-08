@@ -8,9 +8,9 @@
 #define LED_PORT PORTB
 #define LED_DDR DDRB
 
-#define RED_PIN PB0
-#define GREEN_PIN PB1
-#define BLUE_PIN PB2
+#define RED_PIN PB2
+#define GREEN_PIN PB3
+#define BLUE_PIN PB4
 
 #define RED 0
 #define BLUE 1
