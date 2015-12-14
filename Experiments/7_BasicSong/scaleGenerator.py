@@ -1,7 +1,7 @@
 # scaleGenerator.py
 # Scales are in terms of times per cycle (wavelength) rather
-#   than pitch.  
-# 
+#   than pitch.
+#
 
 import math
 
@@ -19,8 +19,8 @@ def makePitches(basePitch, numOctaves):
             if wavelength < 65500:
                 noteString = note + str(octave)
                 pitchList.append((noteString,wavelength))
-    return(pitchList)            
-    
+    return(pitchList)
+
 def makeDefines(basePitch, numOctaves):
     pitchList = makePitches(basePitch, numOctaves)
     defineString = "// Scale in the key of {} \n".format(basePitch)
@@ -30,17 +30,13 @@ def makeDefines(basePitch, numOctaves):
     return(defineString)
 
 if __name__ == "__main__":
-    
+
     ## Change these if you like
-    BASEPITCH = 10000
-    OCTAVES   = 8
-    OUTFILE   = "scale16.h"
-    
+    BASEPITCH = 3810
+    OCTAVES   = 9
+    OUTFILE   = "scale.h"
+
     ## Write it out to a file
     out = open(OUTFILE, "w")
     out.write(makeDefines(BASEPITCH, OCTAVES))
     out.close()
-
-    
-
-
