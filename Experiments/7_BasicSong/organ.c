@@ -17,6 +17,7 @@ void playNote(uint16_t wavelength, uint16_t duration) {
     }
     SPEAKER_PORT ^= (1 << SPEAKER);
   }
+  SPEAKER_PORT &= ~(1 << SPEAKER); // Drop signal to 0V after note is played
 }
 
 void rest(uint16_t duration) {
