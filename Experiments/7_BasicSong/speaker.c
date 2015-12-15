@@ -41,7 +41,7 @@ int main(void) {
   // ------ Event loop ------ //
   while (1) {
         currentNote++;                           /* advance to next note */
-        _delay_ms(1000);                          /* but don't run over the end */
+        _delay_ms(10);                          /* but don't run over the end */
         if (currentNote == SONG_LENGTH) {
           currentNote = 0;
         }
