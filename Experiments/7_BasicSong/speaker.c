@@ -20,7 +20,7 @@ int main(void) {
     C6, Cx6, D6, Dx6, E6, F6,	Fx6, G6, Gx6, A6, Ax6, B6,
     C7, Cx7, D7, Dx7, E7, F7,	Fx7, G7, Gx7, A7, Ax7, B7,
     C8, Cx8, D8, Dx8, E8, F8,	Fx8, G8, Gx8, A8, Ax8, B8,
-    B8 ,Ax8 ,A8 ,Gx8 ,G8 ,Fx8	,F8 ,E8 ,Dx8 ,D8 ,Cx8 ,C8,
+    Ax8 ,A8 ,Gx8 ,G8 ,Fx8	,F8 ,E8 ,Dx8 ,D8 ,Cx8 ,C8,
     B7 ,Ax7 ,A7 ,Gx7 ,G7 ,Fx7	,F7 ,E7 ,Dx7 ,D7 ,Cx7 ,C7,
     B6 ,Ax6 ,A6 ,Gx6 ,G6 ,Fx6	,F6 ,E6 ,Dx6 ,D6 ,Cx6 ,C6,
     B5 ,Ax5 ,A5 ,Gx5 ,G5 ,Fx5	,F5 ,E5 ,Dx5 ,D5 ,Cx5 ,C5,
@@ -28,7 +28,7 @@ int main(void) {
     B3 ,Ax3 ,A3 ,Gx3 ,G3 ,Fx3	,F3 ,E3 ,Dx3 ,D3 ,Cx3 ,C3,
     B2 ,Ax2 ,A2 ,Gx2 ,G2 ,Fx2	,F2 ,E2 ,Dx2 ,D2 ,Cx2 ,C2,
     B1 ,Ax1 ,A1 ,Gx1 ,G1 ,Fx1	,F1 ,E1 ,Dx1 ,D1 ,Cx1 ,C1,
-    B0 ,Ax0 ,A0 ,Gx0 ,G0 ,Fx0	,F0 ,E0 ,Dx0 ,D0 ,Cx0 ,C0
+    B0 ,Ax0 ,A0 ,Gx0 ,G0 ,Fx0	,F0 ,E0 ,Dx0 ,D0 ,Cx0
                                                                 /* etc */
   };
   /* starting at end b/c routine starts by incrementing and then playing
