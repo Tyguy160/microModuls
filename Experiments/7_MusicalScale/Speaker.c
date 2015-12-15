@@ -1,16 +1,15 @@
-// Music Box Input Demo
-
-// ------- Preamble -------- //
 #include <avr/io.h>
 #include <util/delay.h>
 #include "organ.h"
 #include "scale.h"
-#include "pinDefines.h"
+//#include "pinDefines.h"
 
-#define SONG_LENGTH  (sizeof(song) / sizeof(uint16_t))
+#define SPEAKER PD6
+#define SPEAKER_DDR DDRD
+#define SCALE_LENGTH  (sizeof(scale) / sizeof(uint16_t))
 
 int main(void) {
-  const uint16_t song[] = {
+  const uint16_t scale[] = {
     C0, Cx0, D0, Dx0, E0, F0,	Fx0, G0, Gx0, A0, Ax0, B0,
     C1, Cx1, D1, Dx1, E1, F1,	Fx1, G1, Gx1, A1, Ax1, B1,
     C2, Cx2, D2, Dx2, E2, F2,	Fx2, G2, Gx2, A2, Ax2, B2,
@@ -33,19 +32,19 @@ int main(void) {
   };
 
   // Start the scale at the beginning
-  uint8_t currentNote = 0;
+  uint8_t currentNote;
 
   // -------- Inits --------- //
-  DDRD |= (1 << SPEAKER);                 /* speaker for output */
+  SPEAKER_DDR |= (1 << SPEAKER);                 /* speaker for output */
 
   // ------ Event loop ------ //
   while (1) {
 
         _delay_ms(10);         /* but don't run over the end */
-        if (currentNote == SONG_LENGTH) {
+        if (currentNote == SCALE_LENGTH) {
           currentNote = 0;
         }
-      playNote(song[currentNote], 160000);
+      playNote(scale[currentNote], 160000);
       currentNote++;                           /* advance to next note */
 
   }                                                  /* End event loop */
