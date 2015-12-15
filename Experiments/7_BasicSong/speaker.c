@@ -31,21 +31,23 @@ int main(void) {
     B0 ,Ax0 ,A0 ,Gx0 ,G0 ,Fx0	,F0 ,E0 ,Dx0 ,D0 ,Cx0
                                                                 /* etc */
   };
-  /* starting at end b/c routine starts by incrementing and then playing
-     this makes the song start at the beginning after reboot */
-  uint8_t currentNote = SONG_LENGTH - 1;
+
+  // Start the scale at the beginning
+  uint8_t currentNote = 0;
 
   // -------- Inits --------- //
   DDRD |= (1 << SPEAKER);                 /* speaker for output */
 
   // ------ Event loop ------ //
   while (1) {
-        currentNote++;                           /* advance to next note */
-        _delay_ms(10);                          /* but don't run over the end */
+
+        _delay_ms(10);         /* but don't run over the end */
         if (currentNote == SONG_LENGTH) {
           currentNote = 0;
         }
       playNote(song[currentNote], 160000);
+      currentNote++;                           /* advance to next note */
+
   }                                                  /* End event loop */
   return (0);
 }
