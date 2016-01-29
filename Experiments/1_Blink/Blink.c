@@ -1,34 +1,32 @@
-/*
- ADD DESCRIPTION HERE
- */
+// Experiment 1: Blink an LED
 
-// Connect LED to PB0
-#define LED_PORT PC0
-#define DATA_DIRECTION_REGISTER DDRC
-#define PORT PORTC
-#define DELAY_TIME 10000
+// Definitions
+#define LED PD4
+#define DATA_DIRECTION_REGISTER DDRD
+#define LED_PORT PORTD
+#define DELAY_TIME 500
 
 // External libraries
 #include <avr/io.h>
 #include <util/delay.h>
 
-int main()
-{
+// Main method
+int main(void) {
 	// Set LED_PORT to be an output
-	DATA_DIRECTION_REGISTER |= (1 << LED_PORT);
+	DATA_DIRECTION_REGISTER |= (1 << LED);
 
 	// Turn on the LED
-	PORT |= (1 << LED_PORT);
+	LED_PORT |= (1 << LED);
 
-	// Loop forever
-    while(1)
-    {
+		// Loop forever
+    while(1) {
 		// Toggle the status of LED_PORT
-		PORT ^= (1 << LED_PORT);
+		LED_PORT ^= (1 << LED);
 
 		// Delay between toggle (in milliseconds)
 		_delay_ms(DELAY_TIME);
     }
 
+	// This line will never be reached
 	return 0;
 }
