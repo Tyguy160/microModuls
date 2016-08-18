@@ -1,4 +1,4 @@
-MAIN = Blink.c
+MAIN = blink.c
 F_CPU = 1000000
 MCU = atmega328p
 MCU_P = m328p
