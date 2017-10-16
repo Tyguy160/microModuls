@@ -1,9 +1,9 @@
 // Experiment 1: Blink an LED
 
 // Definitions
-#define LED PB0
-#define DATA_DIRECTION_REGISTER DDRB
-#define LED_PORT PORTB
+#define LED PD4
+#define DATA_DIRECTION_REGISTER DDRD
+#define LED_PORT PORTD
 #define DELAY_TIME 500
 
 // External libraries

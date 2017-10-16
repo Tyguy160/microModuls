@@ -1,5 +1,5 @@
 MAIN = blink.c
-F_CPU = 1000000
+F_CPU = 8000000
 MCU = atmega328p
 MCU_P = m328p
 #PORT=/dev/cu.usbmodem00113751
@@ -7,7 +7,7 @@ MCU_P = m328p
 LOCAL_SOURCE =
 EXTRA_SOURCE_DIR = ../../Library/
 
-PROGRAMMER_TYPE = usbtiny
+PROGRAMMER_TYPE = usbasp
 #PROGRAMMER_ARGS = -P $(PORT)
 
 CC = avr-gcc
